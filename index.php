@@ -58,11 +58,33 @@
           <input type="email" name="email" class="form-control">
         </div>
 
-        <div class="col-12">
-          <h4>Habilidades</h4>
-          <div id="formacoes"></div>
-          <button id="habilidades" type="button" class="btn btn-sm btn-outline-primary mt-2">+ Habilidade</button>
+        <div class="mb-3">
+            <label class="form-label"><h5>Habilidades</h5></label>
+                
+            <div class="mb-2">
+            <div class="d-flex flex-wrap gap-2 mt-2">
+            <button type="button" class="btn btn-sm btn-secondary skill-btn">Comunicação</button>
+            <button type="button" class="btn btn-sm btn-secondary skill-btn">Trabalho em equipe</button>
+            <button type="button" class="btn btn-sm btn-secondary skill-btn">Liderança</button>
+            <button type="button" class="btn btn-sm btn-secondary skill-btn">Gestão de tempo</button>
+            <button type="button" class="btn btn-sm btn-secondary skill-btn">Solução de problemas</button>
+            <button type="button" class="btn btn-sm btn-secondary skill-btn">Facilidade de aprendizado</button>
+            <button type="button" class="btn btn-sm btn-secondary skill-btn">Tomada de decisões</button>
+            <button type="button" class="btn btn-sm btn-secondary skill-btn">Proatividades</button>
+            <button type="button" class="btn btn-sm btn-secondary skill-btn">Ingles Técnico</button>
+            </div><br>
+            
+
+            <input type="text" id="custom-skill" class="form-control mb-2" placeholder="Adicione uma habilidade personalizada">
+            <button type="button" id="add-skill" class="btn btn-outline-primary mb-3">Adicionar</button>
+            <br>
+            <div id="skills-list" class="mb-2 d-flex flex-wrap gap-2"></div>
+
         </div>
+
+        <!-- Campo oculto para enviar habilidades -->
+        <input type="hidden" name="habilidades" id="hidden-skills">
+        </div>  
 
         <div class="col-12">
           <h4>Formação acadêmica</h4>
