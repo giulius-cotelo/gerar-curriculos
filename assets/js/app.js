@@ -41,7 +41,7 @@ function addCurso(data = {}) {
           type="text"
           name="curso[${idx}][nome]"
           class="form-control"
-          placeholder="Nome do curso ou live"
+          placeholder="Nome do curso"
           value="${(data.nome||'').replace(/"/g,'&quot;')}"
           required
         >
@@ -114,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
     hiddenSkillsInput.value = skills.join(",");
   }
 
-  // Adiciona habilidade personalizada
   addSkillBtn.addEventListener("click", () => {
     const skill = customSkillInput.value.trim();
     if (skill && !skills.includes(skill)) {
@@ -124,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Adiciona habilidade sugerida
   document.querySelectorAll(".skill-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const skill = btn.textContent.trim();
@@ -136,6 +134,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const addExpBtn = document.getElementById('add-experiencia');
+  if (addExpBtn) {
+    addExpBtn.addEventListener('click', () => addExperiencia());
+  }
+});
 
 
 document.getElementById('add-formacao').addEventListener('click', ()=> addFormacao());

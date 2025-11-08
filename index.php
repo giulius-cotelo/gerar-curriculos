@@ -77,7 +77,6 @@
 
             <input type="text" id="custom-skill" class="form-control mb-2" placeholder="Adicione uma habilidade personalizada">
             <button type="button" id="add-skill" class="btn btn-outline-primary mb-3">Adicionar</button>
-            <br>
             <div id="skills-list" class="mb-2 d-flex flex-wrap gap-2"></div>
 
         </div>
@@ -92,7 +91,7 @@
         </div>
 
         <div id="cursos" class="col-12">
-          <h3>Cursos Lives</h3>
+          <h4>Cursos Lives</h4>
           <div id="cursos-list"></div>
           <button type="button" class="btn btn-sm btn-outline-primary mt-2" onclick="addCurso()">Adicionar Curso</button>
         </div>
