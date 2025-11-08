@@ -1,12 +1,70 @@
 # gerar-curriculos
 Projeto de Gerador de Curriculos simples e rápido para APO da Faculdade
 
-Beleza, criei os arquivos landingpage.html e enviei na branch principal (main)
-criei a branch feature/login e nela a pagina login-page.html
-fiz alterações em ambas as paginas e adicionei a linha do tempo com add e commit
+### Requisitos do Sitema:
 
-voltei para a (main) e uni a brench com a (main) com merge
+Backend: PHP
 
-enviei tudo para a nuvem com push e renome-ei a branch (main) para master, atualizei o repositorio local.
+Front-End: HTML e CSS com Botstrap
 
-vou subir esse readme agora.
+Javascript para campos adicionais ( Experiencia e Formação acadêmica)
+
+Versionamento e Git
+
+Xampp no desenvolvimento e testes locais
+
+Menus de navegação no sistema
+
+Telas no Figma
+
+### Lista de Campos:
+
+Nome
+
+Sobrenome
+
+Data de nascimento (calculo de idade)
+
+Cargo
+
+Pequena Descrição
+
+Endereço
+
+Telefone
+
+E-mail
+
+### Itens Variáveis:
+
+Formação acadêmica
+
+Curso
+
+Local
+
+Data de inicio
+
+Data de fim
+
+Cursos Livres
+
+Nome
+
+### Experiencia Profissional
+
+Cargo
+
+Empresa
+
+Data de inicio
+
+Data de fim
+
+Descrição
+
+### Habilidades
+
+Habilidades pré-definidas
+
+Adicionar mais Habilidades.
