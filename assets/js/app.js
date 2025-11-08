@@ -29,20 +29,18 @@ function addFormacao(data = {}){
   document.getElementById('formacoes').appendChild(container);
 }
 
-function addCurso(data = {}){
-  const idx = Date.now() + Math.floor(Math.random()*1000);
-  const container = document.createElement('div');
-  container.className = 'curso-item border p-3 mb-2';
-  container.innerHTML = `
-    <div class="row g-2">
-      <div class="col-md-8"><input name="curso[${idx}][nome]" placeholder="Nome do curso" class="form-control" value="${data.nome||''}"></div>
-      <div class="col-md-4"><input type="month" name="curso[${idx}][data]" class="form-control" value="${data.data||''}"></div>
-      <div class="col-12 text-end mt-2"><button type="button" class="btn btn-sm btn-danger remove-item">Remover</button></div>
-    </div>
+function addCurso() {
+  const container = document.getElementById('cursos-list');
+  const item = document.createElement('div');
+  item.classList.add('curso-item');
+  item.innerHTML = `
+    <input type="text" placeholder="Nome do curso ou live" required>
+    <input type="number" min="1" placeholder="Horas" style="width: 100px;">
+    <button type="button" onclick="this.parentNode.remove()">Remover</button>
   `;
-  container.querySelector('.remove-item').addEventListener('click', ()=> container.remove());
-  document.getElementById('cursos').appendChild(container);
+  container.appendChild(item);
 }
+
 
 function addExperiencia(data = {}){
   const idx = Date.now() + Math.floor(Math.random()*1000);

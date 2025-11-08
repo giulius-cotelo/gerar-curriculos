@@ -1,5 +1,4 @@
 <?php
-// generate.php - processa POST e exibe CV
 
 function calc_idade($data_nasc){
   if(empty($data_nasc)) return '';
@@ -9,10 +8,6 @@ function calc_idade($data_nasc){
   return $d->y;
 }
 
-
-
-
-// sanitize helper
 function s($v){
   return htmlspecialchars($v ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
@@ -27,7 +22,6 @@ $telefone = s($_POST['telefone'] ?? '');
 $email = s($_POST['email'] ?? '');
 $habilidades = isset($_POST["habilidades"]) ? explode(",", $_POST["habilidades"]) : [];
 
-// Formações e experiências são arrays multidimensionais
 $formacoes = $_POST['formacao'] ?? [];
 $cursos = $_POST['curso'] ?? [];
 $experiencias = $_POST['experiencia'] ?? [];

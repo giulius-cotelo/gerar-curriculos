@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Gerador de Curriculo</title>
+    <title>Gerador de Curriculo Giulius UNIPAR</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
@@ -12,7 +12,7 @@
 <body>
     
   <main class="container my-4">
-    <h1>Gerador de Currículos</h1>
+    <h1>Gerador de Currículos - Giulius UNIPAR</h1>
     <form id="cv-form" action="generate.php" method="post" target="_blank">
       <div class="row g-3">
         <div class="col-md-6">
@@ -82,7 +82,6 @@
 
         </div>
 
-        <!-- Campo oculto para enviar habilidades -->
         <input type="hidden" name="habilidades" id="hidden-skills">
         </div>  
 
@@ -92,11 +91,12 @@
           <button id="add-formacao" type="button" class="btn btn-sm btn-outline-primary mt-2">+ Formação</button>
         </div>
 
-        <div class="col-12 mt-3">
-          <h4>Cursos livres</h4>
-          <div id="cursos"></div>
-          <button id="add-curso" type="button" class="btn btn-sm btn-outline-secondary mt-2">+ Curso</button>
+        <div id="cursos" class="section">
+          <h3>Cursos / Lives</h3>
+          <div id="cursos-list"></div>
+          <button type="button" onclick="addCurso()">Adicionar Curso</button>
         </div>
+
 
         <div class="col-12 mt-3">
           <h4>Experiência profissional</h4>
