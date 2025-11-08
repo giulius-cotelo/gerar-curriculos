@@ -91,10 +91,10 @@
           <button id="add-formacao" type="button" class="btn btn-sm btn-outline-primary mt-2">+ Formação</button>
         </div>
 
-        <div id="cursos" class="section">
-          <h3>Cursos / Lives</h3>
+        <div id="cursos" class="col-12">
+          <h3>Cursos Lives</h3>
           <div id="cursos-list"></div>
-          <button type="button" onclick="addCurso()">Adicionar Curso</button>
+          <button type="button" class="btn btn-sm btn-outline-primary mt-2" onclick="addCurso()">Adicionar Curso</button>
         </div>
 
 

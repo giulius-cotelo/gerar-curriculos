@@ -29,18 +29,44 @@ function addFormacao(data = {}){
   document.getElementById('formacoes').appendChild(container);
 }
 
-function addCurso() {
-  const container = document.getElementById('cursos-list');
-  const item = document.createElement('div');
-  item.classList.add('curso-item');
-  item.innerHTML = `
-    <div class="curso-fields">
-      <input type="text" class="input-padrao" placeholder="Nome do curso ou live" required>
-      <input type="number" class="input-padrao input-horas" min="1" placeholder="Horas" required>
-      <button type="button" class="btn-remover" onclick="this.closest('.curso-item').remove()">✕</button>
+function addCurso(data = {}) {
+  const idx = Date.now() + Math.floor(Math.random() * 1000);
+  const container = document.createElement('div');
+  container.className = 'curso-item border p-3 mb-2';
+
+  container.innerHTML = `
+    <div class="row g-2 align-items-center">
+      <div class="col-md-8">
+        <input
+          type="text"
+          name="curso[${idx}][nome]"
+          class="form-control"
+          placeholder="Nome do curso ou live"
+          value="${(data.nome||'').replace(/"/g,'&quot;')}"
+          required
+        >
+      </div>
+
+      <div class="col-md-3">
+        <input
+          type="number"
+          name="curso[${idx}][horas]"
+          class="form-control"
+          min="1"
+          placeholder="Horas"
+          value="${data.horas || ''}"
+          required
+        >
+      </div>
+
+      <div class="col-md-1 text-end">
+        <button type="button" class="btn btn-sm btn-danger remove-item" title="Remover curso">✕</button>
+      </div>
     </div>
   `;
-  container.appendChild(item);
+
+  container.querySelector('.remove-item').addEventListener('click', () => container.remove());
+  document.getElementById('cursos').appendChild(container);
 }
 
 
