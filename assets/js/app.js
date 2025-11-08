@@ -34,12 +34,15 @@ function addCurso() {
   const item = document.createElement('div');
   item.classList.add('curso-item');
   item.innerHTML = `
-    <input type="text" placeholder="Nome do curso ou live" required>
-    <input type="number" min="1" placeholder="Horas" style="width: 100px;">
-    <button type="button" onclick="this.parentNode.remove()">Remover</button>
+    <div class="curso-fields">
+      <input type="text" class="input-padrao" placeholder="Nome do curso ou live" required>
+      <input type="number" class="input-padrao input-horas" min="1" placeholder="Horas" required>
+      <button type="button" class="btn-remover" onclick="this.closest('.curso-item').remove()">✕</button>
+    </div>
   `;
   container.appendChild(item);
 }
+
 
 
 function addExperiencia(data = {}){
